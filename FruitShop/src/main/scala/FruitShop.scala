@@ -11,8 +11,16 @@ object FruitShop {
           
           def total(inputList:List[String]) : (Int) = {
              var sum = 0
+             var appleCount = 0
+             var orangeCount = 0
              for (item <- inputList) {
-                sum += fruits(item)
+                item match {
+                  case "apple" => appleCount += 1
+                  case "orange" => orangeCount += 1
+                }
+                if ((item == "apple" && appleCount % 2 != 0)||(item == "orange" && orangeCount % 3 != 0)){
+                	sum += fruits(item)
+                }
              }
              sum
           }  
