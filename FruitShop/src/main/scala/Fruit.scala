@@ -1,5 +1,4 @@
 
-
 class Fruit (price: Int, offer: Int) {
   var count = 0
  
@@ -10,7 +9,6 @@ class Fruit (price: Int, offer: Int) {
       } else {
          sum
       }
-                  
    }
                   
    def incrementCount() {
